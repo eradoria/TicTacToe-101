@@ -14,3 +14,11 @@ td {
 table {
   margin: auto auto;
 }
+
+.won{
+  font-size: x-large;
+}
+
+.begin{
+  display: block;
+}

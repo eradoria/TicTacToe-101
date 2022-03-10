@@ -105,10 +105,19 @@ function resetBoard() {
     // reset = "tds" + i;
     // document.getElementById("reset").value = "";
   }
+  document.getElementById("demo").innerHTML = "";
 
+  console.log(board)
+
+  board = [
+    ["", "", ""],
+   ["", "", "",],
+   ["", "", ""]
+  ];
   //reset squares to empty Array
   // tds = [];
 
+    // squares()
   // reset the global variable for the game being over
   // gameOver = false;
 }
@@ -116,30 +125,28 @@ function resetBoard() {
 
 
 //   // @TODO-3.5: MIX & MATCH, You will need the following pieces of code to build that line:
-//   // squares
-//   // .getElementsByTagName("TD")
-//   // =
-//   // document
-//   // const
-  
+const squares = () => {
+ document.getElementsByTagName("TD")
 
 //   // loops over the HTML Collection of TDs and clears out the Xs and Os
-//   for (i=0; i < squares.length; i++) {
+  for (i=0; i < squares.length; i++) {
 
-//     // will log out the id of each square as it loops over them.
-//     console.log(squares[i].id)
+    // will log out the id of each square as it loops over them.
+    console.log(squares[i].id)
 
-//     // sets the innerHTML to null to replace the "X" or "O"
-//     squares[i].innerHTML = null
-//   }  
-// }
+    // sets the innerHTML to null to replace the "X" or "O"
+    squares[i].innerHTML = null
+  }  
+}
 
 
 
 
 const checkForWin = () => {
   if(horizontalWin() || verticalWin() || diagonalWin()) {
-    window.alert(`Player ${currentMarker} won!`)
+    // window.alert(`Player ${currentMarker} won!`)
+    document.getElementById("demo").innerHTML = "You Won!";
+    // document.getElementById("ready").innerHTML = display:none;
   } else {
     changeMarker()
   }
